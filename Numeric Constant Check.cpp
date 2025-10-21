@@ -1,23 +1,32 @@
 #include <iostream>
+#include <string>
+
+
 using namespace std;
 
-int main() {
-    string x;
-    bool flag = true;
-
-    cout << "Input = ";
-    cin >> x;
-
-    for (int i = 0; i < x.length(); i++) {
-        if (x[i] < '0' || x[i] > '9') {
-            flag = false;
-            break;
+bool isNumericConstant(const string& input)
+{
+    for (char c : input)
+    {
+        if (!isdigit(c))
+        {
+            return false;
         }
     }
+    return true;
+}
 
-    if (flag) {
+int main()
+{
+    string input;
+    cout << "Enter input: ";
+    cin >> input;
+
+    if (isNumericConstant(input))
+    {
         cout << "Numeric constant" << endl;
-    } else {
+    } else
+    {
         cout << "Not numeric" << endl;
     }
 
