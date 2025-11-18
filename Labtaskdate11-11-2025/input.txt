@@ -1,3 +1,7 @@
-10+10=20
-x = y + 5
-Im Miran
+int main(){
+Char c;
+c='x';
+add (1,2);
+cout << "hello";
+return 0;
+}
